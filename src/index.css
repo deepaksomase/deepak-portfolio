@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050816;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+/* Readable text on dark navy surfaces (#050816, #0a1024) */
+@layer utilities {
+  .text-body {
+    color: #cbd5e1; /* slate-300 — body copy */
+  }
+
+  .text-muted {
+    color: #94a3b8; /* slate-400 — captions, dates */
+  }
+
+  /* Same typography as Highlights list items — use for all body copy */
+  .text-copy {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: #cbd5e1;
+  }
+
+  .text-copy-muted {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: #94a3b8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
